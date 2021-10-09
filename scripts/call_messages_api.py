@@ -164,6 +164,8 @@ if __name__ == '__main__':
         "chat_id": "xyz890"
     }
 
+    print("Hello")
+
     # Feel free to comment or uncomment to individually test these functions
 
     # call_create_message_api(request_body_1)

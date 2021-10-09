@@ -80,3 +80,12 @@ MessageManager has these functions you can use:
 - MessageManager.filter_messages_by_chat_id
 - MessageManager.get_last_messages
 """
+
+@app.route('/messages/', methods=['GET'])
+def get_all_messages():
+    response = []
+    for message in MessageManager.get_all_messages():
+        response.append(message.to_dict())
+
+    # Flask will autoformat this into JSON response if you return a python dict
+    return {"messages": response}
